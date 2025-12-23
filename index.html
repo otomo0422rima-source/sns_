@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>SNSフォロワー管理</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h2>📈 SNSフォロワー管理</h2>
+
+  <!-- タブ -->
+  <div class="tabs">
+    <button onclick="changeSNS('tiktok')" id="tab-tiktok">TikTok</button>
+    <button onclick="changeSNS('instagram')" id="tab-instagram">Instagram</button>
+    <button onclick="changeSNS('youtube')" id="tab-youtube">YouTube</button>
+  </div>
+
+  <!-- 選択中SNS -->
+  <p id="currentSNS"></p>
+  <p id="date"></p>
+
+  <!-- 入力 -->
+  <input
+    type="number"
+    id="followers"
+    placeholder="今日のフォロワー数"
+  >
+  <button onclick="save()">保存</button>
+
+  <!-- 前日比 -->
+  <h3 id="diff"></h3>
+
+  <!-- 履歴 -->
+  <ul id="history"></ul>
+  <h3>📊 成長グラフ</h3>
+<canvas id="chart" height="200"></canvas>
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
